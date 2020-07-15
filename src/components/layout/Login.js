@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Avatar from "../../images/avatar.png";
 
 class Login extends Component {
@@ -14,7 +15,7 @@ class Login extends Component {
           <input type="password" placeholder="Enter password" />
           <button type="submit">Login</button>
           <p>
-            New to SMovie? <a href="#">Sign Up now.</a>
+            New to SMovie? <Link className="linkStyle_login" to="/register">Sign Up now.</Link>
           </p>
         </form>
       </div>

@@ -1,3 +1,6 @@
+.home_page{
+  background: #1f1f20;
+}
 .home_image{
   position: relative;
   color: white;
@@ -25,7 +28,7 @@
   display: flex;
 }
 .home_navbar h1{
-  color: #fe615a;
+  color: #fb2525;
 }
 .home_navbar h1:hover{
   cursor: pointer;
@@ -37,7 +40,7 @@
   color: white;
 }
 .home_item{
-  background-color: #fe615a;
+  background-color: #fb2525;
   padding: 12px;
   margin-left: 10px;
   border-radius: 5%;
@@ -108,14 +111,59 @@
     background: #ffc107;
     color: #000;
 }
-.loginbox a{
+.linkStyle_login{
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
   color: darkgrey;
 }
 
-.loginbox a:hover
+.linkStyle_login:hover
 {
   color: #ffc107;
+}
+.linkStyle{
+  text-decoration: none;
+}
+.linkStyle li{
+  color: #61dafb;
+}
+.home_info{
+  width: 50%;
+  margin-left: 25%;
+  padding: 30px;
+  color: white;
+  border-top: 6px solid #575758;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home_info h1{
+  color:  #61dafb;
+}
+/*footer*/
+footer{
+  text-align: center;
+  display: grid;
+  background: #1f1f20;
+  border-top: 6px solid #575758;
+}
+.footer-list{
+  display: flex;
+  list-style-type: none;
+  font-size: 60px;
+  justify-content: center;
+}
+.footer-list li{
+  padding-left: 10px;
+}
+.footer-list li:hover{
+  color: #fb2525;
+}
+.ligne{
+  background: white;
+  height: 1px;
+}
+footer p{
+  color: white;
 }
