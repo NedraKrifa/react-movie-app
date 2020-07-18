@@ -167,3 +167,131 @@ footer{
 footer p{
   color: white;
 }
+/*movie*/
+.movie_page{
+  background-color: #01060E;
+  display: grid;
+  grid-row-gap: 20px;
+}
+.movie_navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: #071529;
+  box-shadow: 1px 0 2px 1px #061932;
+}
+.movie_navbar h1{
+  color: #fb2525;
+}
+.movie_navbar_list{
+  padding-top: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  color: #61dafb;
+}
+.user_logout{
+  background-color: #fb2525;
+  padding: 6px;
+  border-radius: 5%;
+  margin-left: 20px;
+}
+.user_logout:hover{
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+.account_avatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+.Movie_list{
+  display: grid;
+  width: 900px;
+  grid-template-columns: repeat(4,auto);
+  grid-row-gap: 10px;
+  background-color: #0F1620;
+  padding: 30px;
+  border-radius: 6px;
+}
+.Movie_item h4{
+  text-align: center;
+  color: rgb(153, 152, 152);
+}
+.Movie_item h4:hover{
+  color: #61dafb;
+}
+.movie_list_container{
+  display: grid;
+  justify-content: center;
+}
+.btn{
+  border: none;
+}
+.btn:hover{
+  background-color: #61dafb;
+}
+.polygone{
+  width: 60px;
+  height: 55px;
+  background-color: rgba(16, 23, 53, 0.8);
+  color: white;
+  clip-path: polygon(83% 100%, 50% 56%, 16% 100%, 16% 0, 83% 0);
+  position: absolute;
+  transform: translate(0,-285px);
+}
+.polygone:hover{
+  cursor: pointer;
+  background-color: rgba(15, 15, 15, 0.8); 
+}
+.polygone div{
+  margin-left: 20px;
+  margin-top: -5px;
+  font-size: 30px;
+}
+.movie_image{
+  position: relative;
+  box-shadow: 0px 0px 10px -2px rgba(97,218,251,1);
+}
+.star{
+  width: 55px;
+  height: 55px;
+  background-color: Gold;
+  color: black;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  position: absolute;
+  transform: translate(145px,-280px);
+}
+.star div{
+  margin-left: 23px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+/*pagination*/ 
+.pagination{
+  padding: 10px 100px 10px 100px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  color: #61dafb;
+  cursor: pointer;
+  background-color: #071529;
+  border-radius: 6px;
+}
+.pagination_container{
+  display: grid;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/*admin*/
+.admin_navbar_list{
+  width: 450px;
+  margin-top: 50px;
+}
+.admin_page,.search_admin{
+  display: grid;
+  justify-content: center;
+}

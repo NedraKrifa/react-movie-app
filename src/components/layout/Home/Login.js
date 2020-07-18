@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Avatar from "../../images/avatar.png";
+import Avatar from "../../../images/avatar.png";
 
 class Login extends Component {
   render() {

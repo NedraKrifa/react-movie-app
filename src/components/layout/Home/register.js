@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Avatar from "../../images/avatar.png";
+import Avatar from "../../../images/avatar.png";
 
 class register extends Component {
   render() {

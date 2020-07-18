@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomeImage from "../../images/background.png";
-import HomeNavbar from "../layout/HomeNavbar";
-import Login from "../layout/Login";
-import Register from "../layout/register";
-import HomeInfo from "../layout/HomeInfo";
-import HomeContact from "../layout/HomeContact";
+import HomeNavbar from "../layout/Home/HomeNavbar";
+import Login from "../layout/Home/Login";
+import Register from "../layout/Home/register";
+import HomeInfo from "../layout/Home/HomeInfo";
+import HomeContact from "../layout/Home/HomeContact";
 
 class Home extends Component {
   render() {
