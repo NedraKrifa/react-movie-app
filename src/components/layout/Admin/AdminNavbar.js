@@ -8,9 +8,6 @@ class AdminNavbar extends Component {
         <Link className="linkStyle" to="/">
           <h1>SMovie</h1>
         </Link>
-        <h1 style={{ color: "white", paddingLeft: "80px" }}>
-          Welcome To Movie List
-        </h1>
         <ul className="movie_navbar_list admin_navbar_list">
           <Link className="linkStyle" to="/">
             <li>Home</li>

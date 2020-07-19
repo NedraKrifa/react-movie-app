@@ -295,3 +295,55 @@ footer p{
   display: grid;
   justify-content: center;
 }
+/*form*/
+.form{
+  display: grid;
+  justify-content: center;
+}
+.form h1{
+  text-align: center;
+  margin-top: 50px;
+  color: #fb2525;
+}
+.form_container{
+  width: 800px;
+  background-color: #0F1620;
+  padding: 30px;
+  border-radius: 6px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.form_group{
+  display: grid;
+  grid-template-columns: 200px 600px;
+  margin-bottom: 20px;
+}
+.form_group input[type=text],.form_group input[type=month],.form_group input[type=number],textarea{
+  padding: 5px;
+  background: #01060E;
+  border: none;
+  color: grey;
+  border-radius: 5px;
+  height: 30px;
+}
+.form_actors input{
+  width: 180px;
+  margin-right: 10px;
+}
+.form-group_checkbox input{
+  margin-right: 10px;
+}
+.form input[type=submit],.form input[type=reset]{
+  border: none;
+  background-color: #61dafb;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 18px;
+}
+.form input[type=reset]{
+  background-color: #fb2525;
+}

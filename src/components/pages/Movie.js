@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { movies } from "../../data/data";
 import MovieList from "../layout/Movie/MovieList";
 import MovieNavbar from "../layout/Movie/MovieNavbar";
 import Pagination from "../layout/Movie/Pagination";
 class Movie extends Component {
   state = {
-    movieList: movies,
-    movieSearch: movies,
+    movieSearch: this.props.movieList,
     currentPage: 1,
     moviesPerPage: 12,
     searchTerm: "",
@@ -41,14 +39,14 @@ class Movie extends Component {
     });
   };
   filteredMovies = (movies, search) => {
-    return movies.filter((movie) => {
+    return {...movies}.filter((movie) => {
       return movie.movieName.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
   };
   searchMovie = (e) => {
     e.preventDefault();
     const movieFilter = this.filteredMovies(
-      this.state.movieList,
+      this.props.movieList,
       this.state.searchTerm
     );
     this.setState({

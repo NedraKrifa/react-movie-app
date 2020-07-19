@@ -28,7 +28,7 @@ class MovieSearch extends Component {
         />
         <input
           type="submit"
-          value="Submit"
+          value="Search"
           className="btn"
           style={{ flex: "1" }}
           onClick={(e) => this.props.searchMovie(e)}

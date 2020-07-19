@@ -1,5 +1,5 @@
 class MovieList{
-    constructor(id,movieName,movieDescription,movieRate,movieTrailer,movieStreaming,moviePoster,movieCategorie,movieRealeaseDate,movieActors){
+    constructor(id,movieName,movieDescription,movieRate,movieTrailer,movieStreaming,moviePoster,movieCategories,movieRealeaseDate,movieActors){
         this.id=id;
         this.movieName=movieName;
         this.movieDescription=movieDescription;
@@ -7,7 +7,7 @@ class MovieList{
         this.movieTrailer=movieTrailer;
         this.movieStreaming=movieStreaming;
         this.moviePoster=moviePoster;
-        this.movieCategorie=movieCategorie;
+        this.movieCategories=movieCategories;
         this.movieRealeaseDate=movieRealeaseDate;
         this.movieActors=movieActors;
     }
@@ -138,7 +138,7 @@ let movie10=new MovieList(
     "https://youtu.be/XrkdhABO3gU",
     "",
     "https://pic.egybest.net/i/RHNhSUNlY21ZVGJ2Y21tbUxjRWN2TkVtbXh4bWJsSw.jpg",
-    ["Fantasy","horror","stir"],
+    ["Fantasy","horror","Stir"],
     2020,
     ["Alyson Bath","Timothy V.Murphy","Jonathan Lipnicki"]
 );
@@ -151,7 +151,7 @@ let movie11=new MovieList(
     "https://youtu.be/OiZAbZeIHLI",
     "",
     "https://pic.egybest.net/i/RHNhSUNlY21ZVGJ2Y21tbXZ2UmNtZk5oenhtbW12Y3c.jpg",
-    ["Science Fiction","horror","stir"],
+    ["Science Fiction","horror","Stir"],
     2020,
     ["Andrea Riseborough","Daniel Park","Brandon Cronenberg"]
 );
@@ -625,3 +625,5 @@ let movie47=new MovieList(
 );
 
 export const movies=[movie1,movie2,movie3,movie4,movie5,movie6,movie7,movie8,movie9,movie10,movie11,movie12,movie13,movie14,movie15,movie16,movie17,movie18,movie19,movie20,movie21,movie22,movie23,movie24,movie25,movie26,movie27,movie28,movie29,movie30,movie31,movie32,movie33,movie34,movie35,movie36,movie37,movie38,movie39,movie40,movie41,movie42,movie43,movie44,movie45,movie46,movie47]
+
+export const categoriesMovie=["Adventure","Comedy","Horror","Science Fiction","Romantic","Documentary","Action","Fantasy","Drama","History","War","Crime","Mystery","Excitement","Stir","Family","Animation","Thriller"]

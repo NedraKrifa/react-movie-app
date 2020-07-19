@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { movies } from "../../data/data";
 import AdminHome from "../layout/Admin/AdminHome";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+ 
 
 class Admin extends Component {
   state = {
-    movieList: movies,
-    movieSearch: movies,
+    movieSearch: this.props.movieList,
     searchTerm: "",
   };
   handleChange = (event) => {
@@ -27,7 +26,7 @@ class Admin extends Component {
   searchMovie = (e) => {
     e.preventDefault();
     const movieFilter = this.filteredMovies(
-      this.state.movieList,
+      this.props.movieList,
       this.state.searchTerm
     );
     this.setState({
@@ -50,6 +49,20 @@ class Admin extends Component {
                 searchMovie={this.searchMovie}
                 handleChange={this.handleChange}
                 movieList={this.state.movieSearch}
+                movieTotal={this.props.movieList}
+                movieName={this.props.movieName}
+                movieDescription={this.props.movieDescription}
+                movieRate={this.props.movieRate}
+                movieTrailer={this.props.movieTrailer}
+                movieStreaming={this.props.movieStreaming}
+                moviePoster={this.props.moviePoster}
+                movieCategories={this.props.movieCategories}
+                movieRealeaseDate={this.props.movieRealeaseDate}
+                movieActor1={this.props.movieActor1}
+                movieActor2={this.props.movieActor2}
+                movieActor3={this.props.movieActor3}
+                addMovie={this.props.addMovie}
+                handleChangeMovie={this.props.handleChangeMovie}
               />
             )}
           />
