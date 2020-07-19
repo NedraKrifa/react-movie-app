@@ -6,7 +6,7 @@ class Login extends Component {
   render() {
     return (
       <div className="loginbox">
-        <img src={Avatar} className="avatar" />
+        <img src={Avatar} className="avatar" alt="avatar"/>
         <h1>Sign In</h1>
         <form>
           <label>Email address</label>

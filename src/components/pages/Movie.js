@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import MovieList from "../layout/Movie/MovieList";
 import MovieNavbar from "../layout/Movie/MovieNavbar";
 import Pagination from "../layout/Movie/Pagination";
+import FilterNavbar from "../layout/Movie/FilterNavbar";
+
 class Movie extends Component {
   state = {
     movieSearch: this.props.movieList,
@@ -39,7 +41,7 @@ class Movie extends Component {
     });
   };
   filteredMovies = (movies, search) => {
-    return {...movies}.filter((movie) => {
+    return [...movies].filter((movie) => {
       return movie.movieName.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
   };
@@ -74,7 +76,10 @@ class Movie extends Component {
           handleChange={this.handleChange}
         />
         <div className="movie_list_container">
-          <MovieList movieList={currentMovies} />
+          <div className="movie_list_filter">
+            <FilterNavbar />
+            <MovieList movieList={currentMovies} markStatusFavori={this.props.markStatusFavori}/>
+          </div>
           <Pagination
             moviesPerPage={this.state.moviesPerPage}
             movieListSize={this.state.movieSearch.length}

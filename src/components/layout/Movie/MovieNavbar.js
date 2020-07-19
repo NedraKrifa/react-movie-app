@@ -6,17 +6,24 @@ class MovieNavbar extends Component {
     return (
       <div className="movie_navbar">
         <h1>SMovie</h1>
-        <MovieSearch searchTerm={this.props.searchTerm} searchMovie={this.props.searchMovie} handleChange={this.props.handleChange} />
-        <ul className="movie_navbar_list">
-          <li>Home</li>
-          <li>
-            <img src={Avatar} className="account_avatar" />
-          </li>
-          <li>
-            <span>NedraKrifa</span>
-          </li>
-          <li className="user_logout">Logout</li>
-        </ul>
+        <MovieSearch
+          searchTerm={this.props.searchTerm}
+          searchMovie={this.props.searchMovie}
+          handleChange={this.props.handleChange}
+        />
+        <div className="navbar_menu">
+          <div className="wish_list">
+            <i className="fas fa-star"><span>WishList</span></i>
+          </div>
+          <div className="dropdown">
+            <img src={Avatar} className="dropbtn account_avatar" alt="avatar"/>
+            <div className="dropdown-content">
+              <a href="#">NedraKrifa</a>
+              <a href="#">Home</a>
+              <a href="#">Logout</a>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

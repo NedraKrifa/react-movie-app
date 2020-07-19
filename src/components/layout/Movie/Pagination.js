@@ -9,18 +9,18 @@ class Pagination extends Component {
   };
   getStylePage = (number) => {
     return {
-      color: number == this.props.currentPage ? "#fb2525" : "#61dafb",
-      transform: number == this.props.currentPage ? "scale(1.5)" : "none",
+      color: number === this.props.currentPage ? "#fb2525" : "#61dafb",
+      transform: number === this.props.currentPage ? "scale(1.5)" : "none",
     };
   };
   getStylePagePrev = () => {
     return {
-      color: this.props.currentPage == 1 ? "grey" : "#61dafb",
+      color: this.props.currentPage === 1 ? "grey" : "#61dafb",
     };
   };
   getStylePageNext = () => {
     return {
-      color: this.props.currentPage == 4 ? "grey" : "#61dafb",
+      color: this.props.currentPage === 4 ? "grey" : "#61dafb",
     };
   };
   render() {

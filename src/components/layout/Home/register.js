@@ -5,7 +5,7 @@ class register extends Component {
   render() {
     return (
       <div className="loginbox loginbox_register">
-        <img src={Avatar} className="avatar" />
+        <img src={Avatar} className="avatar" alt="avatar"/>
         <h1>Sign Up</h1>
         <form>
           <label>Email address</label>

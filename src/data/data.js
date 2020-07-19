@@ -10,6 +10,7 @@ class MovieList{
         this.movieCategories=movieCategories;
         this.movieRealeaseDate=movieRealeaseDate;
         this.movieActors=movieActors;
+        this.statusFavori=false;
     }
 }
 

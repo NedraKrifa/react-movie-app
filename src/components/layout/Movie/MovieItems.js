@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 
 class MovieItems extends Component {
+  getFavoriStyle = () => {
+    return {
+      backgroundColor: this.props.movie.statusFavori
+        ? "crimson"
+        : "rgba(16, 23, 53, 0.8)",
+    };
+  };
   render() {
     const {
-      id,
       movieName,
       movieRate,
       moviePoster,
@@ -20,9 +26,8 @@ class MovieItems extends Component {
         />
         <div
           className="polygone"
-          onClick={() => {
-            console.log("hi");
-          }}
+          style={this.getFavoriStyle()}
+          onClick={(id) => this.props.markStatusFavori(id)}
         >
           <div>+</div>
         </div>

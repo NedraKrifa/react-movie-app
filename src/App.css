@@ -190,6 +190,60 @@ footer p{
   width: 300px;
   color: #61dafb;
 }
+.navbar_menu{
+  display: flex;
+}
+.wish_list{
+  margin-top: 25px;
+  font-size: 25px;
+  color: #fb2525;
+  cursor: pointer;
+}
+.wish_list span{
+  color: #61dafb;
+  margin-left: 10px;font-size: 18px;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  margin-top: 10px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0F1620;
+  border-radius: 5px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 70px;
+  margin-top: -20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #01060E}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .user_logout{
   background-color: #fb2525;
   padding: 6px;
@@ -347,3 +401,52 @@ footer p{
 .form input[type=reset]{
   background-color: #fb2525;
 }
+.filter_navbar{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 200px;
+  margin-right: 30px;
+  background-color: #0F1620;
+  padding: 20px;
+  border-radius: 5px;
+}
+.filter_navbar select,.filter_navbar input[type="number"]{
+  padding: 5px;
+  background: #01060E;
+  border: none;
+  color: grey;
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.filter_navbar input[type=reset]{
+  border: none;
+  background-color: #61dafb;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 18px;
+}
+.filter_navbar input[type=reset]:hover{
+  background-color: #fb2525;
+}
+.movie_list_filter{
+  display: flex;
+  margin-left:-250px;
+  margin-top: 20px;
+}
+.filter_contact{
+  color: rgb(126, 126, 126);
+  width: 200px;
+  margin-right: 30px;
+  background-color: #0F1620;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+

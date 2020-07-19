@@ -20,6 +20,16 @@ class App extends Component {
     movieActor2: "",
     movieActor3: "",
   };
+  markStatusFavori = (id) => {
+    this.setState({
+      movieList: this.state.movieList.map((movie) => {
+        if (movie.id=== id) {
+          movie.statusFavori = !movie.statusFavori;
+        }
+        return movie;
+      }),
+    });
+  };
   handleChangeMovie = (e, category) => {
     switch (e.target.name) {
       case "movieName":
@@ -101,6 +111,14 @@ class App extends Component {
     console.log(this.state.movieList);
     return (
       <div>
+        <Movie movieList={this.state.movieList} markStatusFavori={this.markStatusFavori}/>
+      </div>
+    );
+  }
+}
+
+export default App;
+/*
         <Admin
           movieList={this.state.movieList}
           movieName={this.state.movieName}
@@ -117,9 +135,4 @@ class App extends Component {
           addMovie={this.addMovie}
           handleChangeMovie={this.handleChangeMovie}
         />
-      </div>
-    );
-  }
-}
-
-export default App;
+*/
