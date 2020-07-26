@@ -23,6 +23,11 @@ class Pagination extends Component {
       color: this.props.currentPage === 4 ? "grey" : "#61dafb",
     };
   };
+  getPaginationStyle = () => {
+    return {
+      backgroundColor: this.props.toggleButton ? "white" : "#071529",
+    };
+  };
   render() {
     const {
       moviesPerPage,
@@ -35,7 +40,7 @@ class Pagination extends Component {
     const pageNumbers = this.getArray(n);
     return (
       <div className="pagination_container">
-        <ul className="pagination">
+        <ul className="pagination" style={this.getPaginationStyle()}>
           <li style={this.getStylePagePrev()} onClick={() => paginatePrev()}>
             PREV
           </li>

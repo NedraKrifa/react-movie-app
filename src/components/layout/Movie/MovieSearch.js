@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 
 class MovieSearch extends Component {
+  getMovieInputStyle = () => {
+    return {
+      flex: "10",
+      padding: "5px",
+      background: this.props.toggleButton ? "white" : "#01060E",
+      border: this.props.toggleButton ? "1px solid black" : "none",
+      color : this.props.toggleButton ? "black" : "grey",
+      borderRadius: "5px",
+    };
+  };
   render() {
     return (
       <form
@@ -16,14 +26,7 @@ class MovieSearch extends Component {
           name="title"
           value={this.props.searchTerm}
           placeholder="Search for a movies ..."
-          style={{
-            flex: "10",
-            padding: "5px",
-            background: "#01060E",
-            border: "none",
-            color: "grey",
-            borderRadius: "5px",
-          }}
+          style={this.getMovieInputStyle()}
           onChange={(e) => this.props.handleChange(e)}
         />
         <input

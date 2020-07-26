@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import AdminNavbar from "./AdminNavbar";
 import MovieSearch from "../Movie/MovieSearch";
-import MovieList from "../Movie/MovieList";
 import AddMovie from "./AddMovie";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import MovieListAdmin from "./MovieListAdmin";
 
 class AdminHome extends Component {
   render() {
     return (
       <Router>
         <div>
-          <AdminNavbar />
+          <AdminNavbar handleChangeMovieData={this.props.handleChangeMovieData}/>
           <Route
             exact
-            path="/"
+            path="/admin"
             render={(props) => (
               <div className="admin_page">
                 <div className="search_admin">
@@ -23,7 +23,7 @@ class AdminHome extends Component {
                     handleChange={this.props.handleChange}
                   />
                 </div>
-                <MovieList movieList={this.props.movieList} />
+                <MovieListAdmin movieList={this.props.movieList} deleteMovie={this.props.deleteMovie}/>
               </div>
             )}
           />

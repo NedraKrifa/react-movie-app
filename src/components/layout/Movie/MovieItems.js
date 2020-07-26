@@ -1,15 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class MovieItems extends Component {
   getFavoriStyle = () => {
     return {
       backgroundColor: this.props.movie.statusFavori
-        ? "crimson"
+        ? "#fb2525"
         : "rgba(16, 23, 53, 0.8)",
     };
   };
   render() {
     const {
+      id,
       movieName,
       movieRate,
       moviePoster,
@@ -17,17 +19,20 @@ class MovieItems extends Component {
     } = this.props.movie;
     return (
       <div className="Movie_item">
-        <img
-          className="movie_image"
-          src={moviePoster}
-          alt="movie_item"
-          width="200px"
-          height="280px"
-        />
+        <Link to="/movie/film">
+          <img
+            className="movie_image"
+            src={moviePoster}
+            alt="movie_item"
+            width="200px"
+            height="280px"
+            onClick={this.props.getMovieId.bind(this,id)}
+          />
+        </Link>
         <div
           className="polygone"
           style={this.getFavoriStyle()}
-          onClick={(id) => this.props.markStatusFavori(id)}
+          onClick={this.props.markStatusFavori.bind(this, id)}
         >
           <div>+</div>
         </div>

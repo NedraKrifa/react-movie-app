@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Movie from "./components/pages/Movie";
 import "./App.css";
@@ -23,7 +24,7 @@ class App extends Component {
   markStatusFavori = (id) => {
     this.setState({
       movieList: this.state.movieList.map((movie) => {
-        if (movie.id=== id) {
+        if (movie.id === id) {
           movie.statusFavori = !movie.statusFavori;
         }
         return movie;
@@ -45,7 +46,7 @@ class App extends Component {
         this.setState({ movieStreaming: e.target.value });
         break;
       case "movieRealeaseDate":
-        this.setState({ movieRealeaseDate: e.target.value});
+        this.setState({ movieRealeaseDate: e.target.value });
         break;
       case "movieRate":
         this.setState({ movieRate: e.target.value });
@@ -107,32 +108,55 @@ class App extends Component {
     });
     this.resetInputField();
   };
+  deleteMovie = (id) => {
+    this.setState({
+      movieList: [...this.state.movieList.filter((movie) => movie.id !== id)],
+    });
+  };
+
   render() {
     console.log(this.state.movieList);
     return (
-      <div>
-        <Movie movieList={this.state.movieList} markStatusFavori={this.markStatusFavori}/>
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/movie"
+            render={(props) => (
+              <Movie
+                movieList={this.state.movieList}
+                markStatusFavori={this.markStatusFavori}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/admin"
+            render={(props) => (
+              <Admin
+                movieList={this.state.movieList}
+                movieName={this.state.movieName}
+                movieDescription={this.state.movieDescription}
+                movieRate={this.state.movieRate}
+                movieTrailer={this.state.movieTrailer}
+                movieStreaming={this.state.movieStreaming}
+                moviePoster={this.state.moviePoster}
+                movieCategories={this.state.movieCategories}
+                movieRealeaseDate={this.state.movieRealeaseDate}
+                movieActor1={this.state.movieActor1}
+                movieActor2={this.state.movieActor2}
+                movieActor3={this.state.movieActor3}
+                addMovie={this.addMovie}
+                handleChangeMovie={this.handleChangeMovie}
+                deleteMovie={this.deleteMovie}
+              />
+            )}
+          />
+        </div>
+      </Router>
     );
   }
 }
 
 export default App;
-/*
-        <Admin
-          movieList={this.state.movieList}
-          movieName={this.state.movieName}
-          movieDescription={this.state.movieDescription}
-          movieRate={this.state.movieRate}
-          movieTrailer={this.state.movieTrailer}
-          movieStreaming={this.state.movieStreaming}
-          moviePoster={this.state.moviePoster}
-          movieCategories={this.state.movieCategories}
-          movieRealeaseDate={this.state.movieRealeaseDate}
-          movieActor1={this.state.movieActor1}
-          movieActor2={this.state.movieActor2}
-          movieActor3={this.state.movieActor3}
-          addMovie={this.addMovie}
-          handleChangeMovie={this.handleChangeMovie}
-        />
-*/
