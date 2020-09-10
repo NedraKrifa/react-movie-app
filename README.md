@@ -1,8 +1,8 @@
-# react-movie-app
+# React Movie App
 
 A Movie app built with reactjs
 
-[visit site here](lien)
+[visit site here](https://nedrakrifa.github.io/react-movie-app/)
 
 ## What is SmartMovie App?
 
@@ -46,4 +46,4 @@ In this website, you will get many movies to watch and download by just register
 ![Film Screen](/public/assets/film.PNG)
 
 ## Demo
-Demo [HERE](lien)
+Demo [HERE](https://nedrakrifa.github.io/react-movie-app/)
