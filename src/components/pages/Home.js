@@ -90,7 +90,7 @@ class Home extends Component {
       this.checkInput(this.state.password) &&
       this.isAccountExist(this.state.email, this.state.password)
     ) {
-      alert(" yor are login Now \n welcome to your account.");
+      alert(" yor are logged in \n welcome to your account.");
       console.log(this.props);
       this.props.history.push("/movie");
     } else if (

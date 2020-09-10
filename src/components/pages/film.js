@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import StarRate from "../layout/layoutUtil.js/starRate";
 
-class film extends Component {
+class Film extends Component {
   render() {
     const {
       movieName,
@@ -68,4 +68,4 @@ class film extends Component {
   }
 }
 
-export default film;
+export default Film;
